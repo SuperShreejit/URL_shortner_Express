@@ -1,0 +1,22 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">Full URL</th>
+			<th scope="col">Short URL</th>
+			<th scope="col">Clicks</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% shortUrls.forEach(url =>{ %>
+		<tr>
+			<td>
+				<a class="urls" href="<%= url.fullUrl %>"><%= url.fullUrl %></a>
+			</td>
+			<td>
+				<a href='/<%= url.short %>' class="urls"><%= url.short %></a>
+			</td>
+      	<td><%= url.clicks %></td>
+		</tr>
+		<% }) %>
+	</tbody>
+</table>
